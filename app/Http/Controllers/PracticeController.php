@@ -9,7 +9,26 @@ use cebe\markdown\MarkdownExtra;
 class PracticeController extends Controller
 {
 
-  
+
+    public function practice5()
+{
+    $parser = new MarkdownExtra();
+    echo $parser->parse('# Hello World'); 
+    # Will produce <h1>Hello World</h1>
+}
+
+
+    public function practice4()
+    {
+        Debugbar::info('hello world');
+        Debugbar::info(['a' => 1, 'b' => 2, 'c' => 3]);
+        Debugbar::error('Error!');
+        Debugbar::warning('Watch out…');
+        Debugbar::addMessage('Another message', 'mylabel');
+
+        return 'Practice 4';
+    }
+
   public function practice3()
     {
        return view('abc');
