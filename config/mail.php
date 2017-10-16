@@ -2,6 +2,8 @@
 
 return [
 
+    'supportEmail' => 'support@foobooks.dwa15.me',
+
     /*
     |--------------------------------------------------------------------------
     | Mail Driver

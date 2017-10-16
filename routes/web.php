@@ -11,6 +11,14 @@
 |
 */
 
+Route::get('/env', function () {
+    dump(config('app.name'));
+    dump(config('app.env'));
+    dump(config('app.debug'));
+    dump(config('app.url'));
+});
+
+Route::any('practice/{n?}', 'PracticeController@index');
 Route::get('/', 'WelcomeController');
 Route::get('/book/', 'BookController@index');
 Route::get('/book/{title}', 'BookController@show');
